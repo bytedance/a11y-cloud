@@ -1,0 +1,608 @@
+/*
+Copyright (2024) Bytedance Ltd. and/or its affiliates
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+@baseZindex: 2147000000;
+
+@aiColor: rgb(76, 0, 255);
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--semi-color-text-1);
+  text-decoration: none;
+}
+
+.root {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.rootSpin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 4px rgb(187, 187, 187);
+  z-index: 1;
+}
+
+.headerLabel {
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.headerSearch {
+  flex: 1;
+}
+
+.headerNew {
+  margin: 0 16px;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+  overflow: overlay;
+}
+
+.semiModalRule {
+  :global {
+    .semi-modal {
+      width: 85%;
+      min-width: 340px;
+      max-width: 800px;
+      margin-top: 30px;
+    }
+  }
+}
+
+.filterHeader {
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.filterHeaderOpt {
+  margin-right: 10px;
+}
+
+.search {
+  flex: 1;
+}
+
+.searchResult {
+  margin-left: 10px;
+  color: #666;
+}
+
+.searchLight {
+  background-color: #ffff00;
+}
+
+.smallList {
+  flex: 1;
+  overflow: hidden;
+}
+
+.labelCol {
+  flex-shrink: 0;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.contentColMain {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.selectorInit {
+  flex: 1;
+}
+
+.pageSelect {
+  width: 100%;
+}
+
+.a11yTag {
+  user-select: text;
+}
+
+.tabindexInfo {
+  display: flex;
+  align-items: center;
+}
+
+.tabindexInfoIcon {
+  margin-left: 10px;
+}
+
+.contentCol {
+  overflow: hidden;
+  position: relative;
+
+  &.disable {
+    opacity: .4;
+  }
+}
+
+.contentCol2 {
+  .contentCol;
+  flex: 1
+}
+
+.moreLabelEdit {
+  display: flex;
+  align-items: center;
+}
+
+.tabindexTipText {
+  font-weight: 600;
+}
+
+.input2 {
+  width: 84px;
+  margin: 4px 0;
+}
+
+.input3 {
+  width: 120px;
+  margin-right: 4px;
+}
+
+.select1 {
+  width: 90px;
+  margin: 0 14px 0 4px;
+}
+
+.removeTermBtn {
+  color: #F93920;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.chooseCssDom {
+  margin-left: 5px;
+}
+
+.tabindexDesc {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.chooseCssDomTerm {
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.cutopt {
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+.labelGroup {
+  border: 1px solid var(--semi-color-border);
+  padding: 8px;
+}
+
+.labelCofig {
+  flex-direction: row;
+  align-items: center;
+}
+
+.labelPotMore {
+  margin-left: 3px;
+}
+
+.labelDiv() {
+  border-top: 1px solid var(--semi-color-border);
+  margin-top: 6px;
+  padding-top: 8px;
+  display: flex;
+}
+
+.labelDivider {
+  .labelDiv();
+  align-items: center;
+}
+
+.labelDividerTerm {
+  .labelDiv();
+  flex-direction: column;
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.labelDividerBtn {
+  .labelDiv();
+  justify-content: flex-end;
+}
+
+.moreLabelGrpBtn {
+  margin-left: 16px;
+}
+
+.rowDisable {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: not-allowed;
+}
+
+.mustAcco {
+  color: rgb(255, 0, 0);
+}
+
+.selectRole {
+  min-width: 180px;
+  max-width: 100%;
+}
+
+.diverText {
+
+  span {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+  }
+  color: #666;
+  margin: 14px 0;
+}
+
+.editBtnRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saveBtn {
+  margin-left: 16px;
+}
+
+.editBottom {
+  display: flex;
+  padding: 10px 16px;
+}
+
+.splitCut {
+  line-height: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.labelOne {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.labelOneLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.labelTypeSelect {
+  width: 92px;
+}
+
+.labelAutoInput {
+  width: 200px;
+
+  &.small {
+    width: 180px;
+  }
+}
+
+.hoverLight {
+  background-color: rgba(95, 176, 250, .5);
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.pageHead {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.pageHeadTag {
+  user-select: text;
+  max-width: 210px;
+}
+
+.pageHeadText {
+  margin-left: 10px;
+  flex: 1;
+  user-select: text;
+}
+
+.pageHeadTextNum {
+  margin: 0 10px;
+  color: #666;
+  font-style: oblique;
+}
+
+.labelMust {
+  color: var(--semi-color-danger);
+}
+
+.newRuleBtn {
+  margin-left: 12px;
+}
+
+.pageHandleMenu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.pageMenuBtn {
+  margin: 10px 10px 0;
+}
+
+.pageMenuEnter {
+  cursor: default;
+}
+
+.semiModalRule {
+  :global {
+    .semi-modal {
+      width: 85%;
+      min-width: 340px;
+      max-width: 800px;
+      margin-top: 30px;
+    }
+  }
+}
+
+.pageDelTag {
+  font-size: 16px;
+  margin: 10px 0 25px;
+}
+
+.addEventLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapWordGroup {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px dashed #0077fa;
+}
+
+.mapWordDel {
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+}
+
+.row1 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px
+}
+
+.row11 {
+  .row1;
+  padding-left: 12px;
+}
+
+.rowLabel {
+  margin-right: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.headerRoomDesc {
+  white-space: nowrap;
+}
+.headerRoomInput {
+  width: 120px !important;
+  margin-right: 10px;
+}
+.headerRoomButton {
+  margin-left: 10px !important;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.toolCard {
+  width: calc(100% - 40px);
+  margin: 10px 0;
+  align-self: center;
+  :global(.semi-card-body) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .toolCardItem {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.toolCardItemLabel {
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.logoImg {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.searchTag {
+  flex: 1
+}
+
+.aiTagWord {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  max-width: 469px;
+  cursor: pointer;
+}
+
+.aiTagWordChoose {
+  cursor: not-allowed;
+}
+
+.aiDistance {
+  margin-bottom: 5px;
+}
+
+.aiTagImg {
+  margin-right: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+}
+
+.aiTagImage {
+  width: 100%;
+  height: 100%;
+}
+
+.aiImgChooseInx {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: @aiColor;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 50%;
+}
+
+.aiTagchoose {
+  border: 3px solid @aiColor;
+  cursor: not-allowed;
+}
+
+.aiColor {
+  color: @aiColor;
+}
+
+.maxContent {
+  max-height: 500px;
+  overflow: overlay;
+}
+
+:global {
+  .arco-card-body {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .arco-table-container .lightTableRow {
+    background-color: rgba(0, 128, 0, .08);
+
+    &:hover {
+      background-color: rgba(252, 51, 51, .1);
+    }
+
+    .arco-table-td {
+      background-color: transparent;
+    }
+  }
+}
+
+:global {
+  .arco-input-group {
+    display: flex;
+  }
+
+  .arco-collapse-item-header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .arco-collapse-item-header-title {
+    flex: 1;
+  }
+
+  .arco-collapse {
+    border: none;
+  }
+
+  .arco-collapse {
+    overflow: visible;
+  }
+}

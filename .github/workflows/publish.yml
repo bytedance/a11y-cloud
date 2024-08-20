@@ -1,0 +1,47 @@
+name: Publish Release 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  publish-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+  
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npx yarn
+
+      - name: Setup git userName
+        run: git config --global user.name 'codetker'
+
+      - name: Setup git userEmail
+        run: git config --global user.email 'codetker@sina.com'
+
+      - name: Lerna Version
+        run: npx lerna version patch --yes
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Lerna Publish
+        run: npx lerna publish from-package --yes
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

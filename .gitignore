@@ -1,0 +1,12 @@
+node_modules
+.build
+.DS_Store
+tsconfig.tsbuildinfo
+coverage
+dist
+output
+.env
+yarn-error.log
+examples/nodejs-server/_a11y_DATA/**/*.json
+.last_choose
+.eslintcache

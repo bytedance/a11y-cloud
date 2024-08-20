@@ -1,0 +1,31 @@
+{
+  "name": "a11y-web-socket",
+  "version": "0.0.1",
+  "author": "bytedance",
+  "description": "Cloud Label Socket Service, providing socket annotation capabilities.",
+  "keywords": [
+    "Cloud Label Socket Service",
+    "a11y-web-socket",
+    "a11y"
+  ],
+  "private": true,
+  "main": "./src/index.js",
+  "files": [
+    "./src"
+  ],
+  "scripts": {
+    "start": "node ./src/index.js",
+    "build": "node ./src/index.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --cache --quiet .",
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "socket.io-client": "^4.7.5"
+  },
+  "license": "Apache License"
+}

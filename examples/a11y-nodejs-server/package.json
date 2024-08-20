@@ -1,0 +1,44 @@
+{
+  "name": "a11y-nodejs-server",
+  "private": true,
+  "version": "0.0.1",
+  "description": "a11y cloud nodejs server",
+  "main": "./src/service.js",
+  "scripts": {
+    "start": "npm run start:webAll & npm run start:node",
+    "build": "npm run build:web && npm run build:server",
+    "start:node": "node ./script/setEnv.js --dev && node --watch ./src/service.js",
+    "build:node": "node ./script/setEnv.js && node --watch ./src/service.js",
+    "start:webAll": "npm run start:webClient & npm run start:webSdk & npm run start:webSocket",
+    "build:web": "npm run build:webClient && npm run build:webSdk",
+    "build:server": "npm run build:webSocket & npm run build:node",
+    "start:webClient": "cd ../../packages/a11y-web-client && yarn start",
+    "start:webSdk": "cd ../../packages/a11y-web-sdk && yarn start",
+    "start:webSocket": "cd ../../packages/a11y-web-socket && yarn start",
+    "build:webClient": "cd ../../packages/a11y-web-client && yarn build",
+    "build:webSdk": "cd ../../packages/a11y-web-sdk && yarn build",
+    "build:webSocket": "cd ../../packages/a11y-web-socket && yarn build",
+    "test": "npm run build:web && jest",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --cache --quiet ."
+  },
+  "keywords": [
+    "a11y",
+    "a11y-nodejs-server"
+  ],
+  "author": "bytedance",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.5",
+    "koa": "^2.15.3",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.1",
+    "koa-static": "^5.0.0",
+    "open": "6.0.0",
+    "uuid": "^10.0.0"
+  },
+  "license": "Apache License",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

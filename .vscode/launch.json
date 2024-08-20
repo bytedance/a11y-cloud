@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "启动程序(Start Program)",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/script/start.js",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "构建程序(Build Program)",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/script/build.js",
+      "console": "integratedTerminal"
+    }
+  ]
+}

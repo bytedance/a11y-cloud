@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "route": "*",
+      "data": [
+        {
+          "desc": "React Logo image",
+          "attrs": {
+            "tabindex": "1",
+            "role": "img",
+            "accesskey": "react logo"
+          },
+          "calcAttrs": {},
+          "autoFocus": true,
+          "_id": "35418af4-8293-4f59-8572-e31270be23f6",
+          "aid": "f76417e1"
+        },
+        {
+          "desc": "",
+          "attrs": {
+            "role": "alert"
+          },
+          "calcAttrs": {},
+          "aid": "db74b014",
+          "_id": "7e9d66be-a498-4feb-b8d7-e0c94b9b8db4"
+        }
+      ],
+      "_id": "2490cc05-5668-4d6b-82f7-f2b11d544336"
+    }
+  ]
+}

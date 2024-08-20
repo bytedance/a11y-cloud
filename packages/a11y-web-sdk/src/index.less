@@ -1,0 +1,74 @@
+/*
+Copyright (2024) Bytedance Ltd. and/or its affiliates
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+[a11yExt_cfg] {
+  outline-offset: -2px !important;
+  outline: green dotted 3px !important;
+}
+
+[a11yExt_cfg][a11yExt_active] {
+  outline: red dotted 3px !important;
+}
+
+[a11yExt_cfg][a11yExt_relative] {
+  position: relative !important;
+}
+
+[a11yExt_cfg]::after {
+  content: attr(a11yExt_index) !important;
+  z-index: 2147000000 !important;
+  pointer-events: none !important;
+  display: none !important;;
+  width: 30px !important;;
+  height: 30px !important;;
+  background-color: green !important;;
+  opacity: 0.7 !important;;
+  border-radius: 50% !important;;
+  position: absolute !important;;
+  left: 50% !important;;
+  top: 50% !important;;
+  margin-left: -15px !important;;
+  margin-top: -15px !important;;
+  transform-origin: center !important;;
+  justify-content: center !important;;
+  align-items: center !important;;
+  color: #fff !important;;
+  font-weight: bold !important;;
+}
+
+[a11yExt_cfg][a11yExt_per100]::after {
+  display: flex !important;;
+  transform: scale(1) !important;;
+}
+
+[a11yExt_cfg][a11yExt_per60]::after {
+  display: flex !important;;
+  transform: scale(.6) !important;;
+}
+
+[a11yExt_cfg][a11yExt_per30]::after {
+  display: flex !important;;
+  transform: scale(.3) !important;;
+}
+
+[a11yExt_cfg][a11yExt_active]::after {
+  background-color: red !important;;
+}
+
+.a11y_auto_light {
+  outline-offset: -2px !important;
+  outline: pink solid 3px !important;
+}
+.a11y_auto_light_multi {
+  outline-offset: -2px !important;
+  outline: purple solid 3px !important;
+}

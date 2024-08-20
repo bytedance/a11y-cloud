@@ -1,0 +1,45 @@
+{
+  "name": "a11y-webpack-loader-react",
+  "version": "0.0.1",
+  "private": true,
+  "author": "bytedance",
+  "description": "a11y-webpack-loader-react example",
+  "keywords": [
+    "a11y-webpack-loader-react",
+    "a11y-webpack-loader",
+    "a11y"
+  ],
+  "dependencies": {
+    "i18next": "^23.11.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "npm run start & npm run build:nodejs",
+    "build:nodejs": "cd ../a11y-nodejs-server && npm run build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "a11y-webpack-loader": "^0.0.1",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1",
+    "react-scripts": "5.0.1"
+  }
+}
