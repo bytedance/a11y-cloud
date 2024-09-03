@@ -1,18 +1,19 @@
 <h2 align="center">
   <img width="70" src="https://sf16-sg.tiktokcdn.com/obj/eden-sg/plduhogbps/image/a11y-icon.png" >
   <p>无障碍云标签-助力视障群体</p>
+  <div align="center">
+    <a>
+        <img src="https://img.shields.io/badge/LICENSE-MIT-brightgreen.svg">
+    </a>
+    <a>
+        <img src="https://img.shields.io/badge/node-+18.12.0-green.svg">
+    </a>
+  </div>
 </h2>
 无障碍解决方案，不再需要前端开发者持续写代码适配。只需接入云标签sdk后，根据云标签定义的数据规则，使用标注工具进行可视化配置，并实时进行无障碍测试，该工作全程可由 0 研发基础的QA或其他角色完成。
 （当UI视图结构动态变化时，云标签sdk会根据页面内容实时生成新的无障碍属性）
 
 [English Version](./README.md)
-
-### 环境要求
-
-Node: 建议使用 **node v18.12.0** 或更高版本
-
-浏览器: 依赖 [Socket.IO](https://www.npmjs.com/package/socket.io)
-![Client 版本](https://camo.githubusercontent.com/40fa0971ae4554132eaa9669afdc0a5ed63c315de05dcf22fdb68a6cdec42728/68747470733a2f2f73617563656c6162732e636f6d2f62726f777365722d6d61747269782f736f636b65742e737667)
 
 ### 快速体验
 

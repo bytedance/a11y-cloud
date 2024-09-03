@@ -1,18 +1,19 @@
 <h2 align="center">
   <img width="70" src="https://sf16-sg.tiktokcdn.com/obj/eden-sg/plduhogbps/image/a11y-icon.png">
   <p>Accessibility Cloud Label - Empowering the Visually Impaired Community</p>
+  <div align="center">
+    <a>
+        <img src="https://img.shields.io/badge/LICENSE-MIT-brightgreen.svg">
+    </a>
+    <a>
+        <img src="https://img.shields.io/badge/node-+18.12.0-green.svg">
+    </a>
+  </div>
 </h2>
 Accessibility solutions no longer require front-end developers to continuously write code for adaptation. Simply integrate the Cloud Label SDK, use the annotation tool for visual configuration based on the data rules defined by Cloud Label, and conduct real-time accessibility testing. This entire process can be completed by QA or other roles with no development foundation.
 (When the UI view structure dynamically changes, the Cloud Label SDK will generate new accessibility attributes in real-time based on the page content)
 
 [中文版本](./README.CN.md)
-
-### Environment Requirements
-
-Node: It is recommended to use **node v18.12.0** or higher versions.
-
-Browser: depending on [Socket.IO](https://www.npmjs.com/package/socket.io)
-![Client 版本](https://camo.githubusercontent.com/40fa0971ae4554132eaa9669afdc0a5ed63c315de05dcf22fdb68a6cdec42728/68747470733a2f2f73617563656c6162732e636f6d2f62726f777365722d6d61747269782f736f636b65742e737667)
 
 ### Quick Experience
 
