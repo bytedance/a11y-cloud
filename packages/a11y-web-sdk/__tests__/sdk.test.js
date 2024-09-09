@@ -1,5 +1,5 @@
 const { MarkSDK } = require('../src/index');
-import { codeGenerate } from '../../src/a11y-webpack-loader/code-generate';
+import { codeGenerate } from '../../a11y-webpack-loader/src/code-generate';
 
 test('renders initial test', () => {
   const markSDK = new MarkSDK({
@@ -9,7 +9,6 @@ test('renders initial test', () => {
 
   expect(markSDK.wsIO).toBeDefined();
 });
-
 
 const commonOptions = {
   customProperty: 'a11y',
@@ -236,4 +235,3 @@ describe('code generate test', () => {
 });`);
   });
 });
-
