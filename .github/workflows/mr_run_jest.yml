@@ -1,5 +1,8 @@
 name: Jest
 
+env:
+  ACTIONS_STEP_DEBUG: true
+
 on:
   pull_request:
     branches:
@@ -11,10 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # - name: Display debug information # to debug
+      #   run: |
+      #     echo "Current GitHub context:"
+      #     echo "${{ toJson(github) }}"
+
       - name: Checkout Branch
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
+        # with:
+        #   ref: ${{github.head_ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -22,8 +30,16 @@ jobs:
           node-version: 18
           registry-url: "https://registry.npmjs.org"
 
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Install Dependencies
         run: npx yarn
 
       - name: Run Jest
-        run: npx yarn test
+        run: npx yarn test --coverage

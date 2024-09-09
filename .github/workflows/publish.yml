@@ -1,4 +1,4 @@
-name: Publish Release 
+name: Publish Release
 
 on:
   push:
@@ -6,33 +6,32 @@ on:
       - main
 
 jobs:
-
   publish-release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       packages: write
-    
+
     steps:
       - name: Checkout Branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-  
+
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
         run: npx yarn
 
       - name: Setup git userName
-        run: git config --global user.name 'codetker'
+        run: git config user.name 'yukilzw'
 
       - name: Setup git userEmail
-        run: git config --global user.email 'codetker@sina.com'
+        run: git config user.email 'liuzhanwei@bytedance.com'
 
       - name: Lerna Version
         run: npx lerna version patch --yes
